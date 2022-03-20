@@ -27,8 +27,6 @@ app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
 
-# ----------------------------------------------------VIEWS-------------------------------------------------
-
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -130,7 +128,7 @@ def addTrek():
 
 
 
-# ------------------------------------API INTERFACE BEGINS FROM HERE -------------------------------------
+
 
 @app.route('/api/treks')
 def getAllTreksAPI():
@@ -289,7 +287,7 @@ def __getUserID(token):
     return userID
 
 
-#-----------------------------------REST API EXAMPLE----------------------------------------------
+# yo chai rest part
 
 @app.route('/rest/treks',methods=['GET','POST','PUT','DELETE'])
 def restAPI():
@@ -368,7 +366,6 @@ def restAPI():
 
 
 
-# ----------------------------------------------------------------------------------
 
 if __name__ == '__main__':
     app.run(debug=True)
